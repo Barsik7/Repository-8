@@ -1,0 +1,106 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+  
+  .nav-toggler-ctr, .menu-title {
+    display: none;
+  }
+  
+  nav {
+    &.show {
+      animation: 250ms ease-out navslidein;
+      display: block;
+    }
+  
+    &.hide {
+      animation: 250ms ease-out navslideout forwards;
+      display: block;
+    }
+  }
+  
+  @keyframes navslidein {
+    from {
+      left: -250px;
+    }
+  
+    to {
+      left: 0;
+    }
+  }
+  
+  @keyframes navslideout {
+    from {
+      left: 0;
+    }
+  
+    to {
+      left: -250px;
+    }
+  }
+  
+  .header-sign-btns {
+    &.show {
+      animation: 250ms ease-out login-slidein;
+      display: block;
+    }
+  
+    &.hide {
+      animation: 250ms ease-out login-slideout forwards;
+      display: block;
+    }
+  }
+  
+  @keyframes login-slidein {
+    from {
+      right: -250px;
+    }
+  
+    to {
+      right: 0;
+    }
+  }
+  
+  @keyframes login-slideout {
+    from {
+      right: 0;
+    }
+  
+    to {
+      right: -250px;
+    }
+  }
+  
+  .nav-item-list {
+    padding: 0;
+  }
+  
+  .nav-item {
+    display: inline-block;
+  }
+  
+  .nav-link {
+    color: var(--text-color-light);
+    text-decoration: none;
+    margin: 0 1.1rem;
+    font-size: 1rem;
+  }
+  
+  .login-toggler-ctr {
+    display: none;
+  }
+  
+  .sign-in-btn {
+    font-weight: 500;
+  }
+  
+  .sign-up-btn {
+    padding: 10px 40px;
+    font-weight: 500;
+  }
+  
+  .sign-in-btn, .sign-up-btn {
+    margin: 0 0.8rem;
+  }
